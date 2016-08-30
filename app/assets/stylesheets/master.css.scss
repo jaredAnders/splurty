@@ -6,12 +6,16 @@ $lora: 'Lora', serif;
 $roboto: 'Roboto', sans-serif;
 $red: #F44336;
 
+hr {
+  margin-bottom: 0;
+}
+
 .clear {
-  clear:both;
+  clear: both;
 }
 
 .circle {
-    font-weight:bold;
+    font-weight: bold;
     font-style: italic;
     position: relative;
     border-radius: 100%;
@@ -73,12 +77,17 @@ h2 {
 }
 
 .next-quote {
+  text-align: right;
+}
+
+.btn-red {
   color: white;
   background: $red;
-  padding: 5px;
+  padding: 7px;
   border-radius: 3px;
   font: $roboto;
   transition: .3s ease-out;
+  text-align: right;
   &:hover, &:focus {
     color: white;
     background: lighten($red, 12%);
@@ -89,6 +98,10 @@ h2 {
 .footer-blurb {
   font-family: $roboto;
   color: lighten(black, 25%);
-  text-align: right;
+  text-align: left;
   font-style: italic;
+}
+
+.logo:hover {
+  text-decoration: none;
 }

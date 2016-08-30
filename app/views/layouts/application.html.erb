@@ -9,20 +9,22 @@
 <body>
   <header>
     <div class="col-xs-3">
-      <div class="circle">
-        <br />
-        Mad
-        <br />
-        Fresh
-        <br />
-        Quotes
-      </div>
+      <%= link_to root_path, class: 'logo' do %>
+        <div class="circle">
+          <br />
+          Mad
+          <br />
+          Fresh
+          <br />
+          Quotes
+        </div>
+      <% end %>
     </div>
     <div class="col-xs-4 slogan">
       Droppin the freshest quotes in the game
     </div>
     <div class="col-xs-5 links">
-      <%= link_to 'Contribute', '#' %>
+      <%= link_to 'Add a quote', new_quote_path %>
       /
       <%= link_to 'About', '#' %>
     </div>
@@ -34,13 +36,15 @@
     <%= yield %>
   </div>
 
+  <br class="clear" />
+
   <div class="footer">
     <div class="container">
-      <div class="col-xs-6">
-        <%= link_to "View next quote", "#", class: 'next-quote' %>
-      </div>
       <div class="col-xs-6 footer-blurb">
         Made in Boston by Jared Gilbert
+      </div>
+      <div class="col-xs-6 next-quote">
+        <%= link_to "View next quote", root_path, class: 'btn btn-danger' %>
       </div>
     </div>
   </div>
