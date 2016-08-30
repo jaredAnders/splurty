@@ -1,5 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'https://fonts.googleapis.com/css?family=Lora';
+
+$lora: 'Lora', serif;
 
 .clear {
   clear:both;
@@ -26,7 +29,7 @@
 }
 
 .slogan {
-  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-family: $lora;
   font-style: italic;
   padding-top: 26px;
 }
@@ -35,8 +38,14 @@
   padding-top: 26px;
   a {
     color:black;
-    font-size: 25px;
+    font-size: 16px;
     border-bottom: 1px solid #dfdfdf;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 1px solid black;
+    }
   }
 }
 
@@ -46,4 +55,14 @@ header {
 
 hr {
   clear: both;
+}
+
+h1 {
+  font-family: $lora;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: $lora;
+  font-style: italic;
 }
