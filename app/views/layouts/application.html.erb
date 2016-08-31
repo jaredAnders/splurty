@@ -23,7 +23,7 @@
     </div> -->
     <div class="col-xs-6 col-xs-offset-3 links">
       <%= link_to '+ add a quote', '#', data: {toggle: 'modal', target: '#newQuoteModal'}%>
-      /
+      &nbsp;/&nbsp;
       <%= link_to 'about', about_path %>
     </div>
   </header>
@@ -38,8 +38,9 @@
        </div>
        <%= simple_form_for Quote.new do |f| %>
          <div class="modal-body">
-         <%= f.input :saying %>
-         <%= f.input :author %>
+         <%= f.input :saying, label: "Quote:", placeholder: "quote" %>
+         <br>
+         <%= f.input :author, label: "Author:", placeholder: "author" %>
          </div>
          <div class="modal-footer">
            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -70,13 +71,13 @@
   <div class="footer">
     <br class="clear" />
     <div class="container">
-      <div class="col-xs-6 footer-blurb">
-        Built by <a target="_blank" href="https://jaredanders.github.io">Jared Gilbert</a>
-      </div>
-      <div class="col-xs-6 next-quote">
+      <div class="col-xs-12 col-sm-push-6 col-sm-6 next-quote">
         <%= link_to root_path, class: 'btn btn-danger' do %>
           <span>View new quote <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></span>
         <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-pull-6 col-sm-6 footer-blurb">
+        Built by <a target="_blank" href="https://jaredanders.github.io">Jared Gilbert</a>
       </div>
     </div>
   </div>
