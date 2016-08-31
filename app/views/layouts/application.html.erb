@@ -22,15 +22,39 @@
        Droppin the freshest quotes in the game
     </div> -->
     <div class="col-xs-6 col-xs-offset-3 links">
-      <%= link_to '+ add a quote', new_quote_path %>
+      <%= link_to '+ add a quote', '#', data: {toggle: 'modal', target: '#newQuoteModal'}%>
       /
       <%= link_to 'about', about_path %>
     </div>
   </header>
+
+  <!-- Modal -->
+  <div class="modal fade" id="newQuoteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+         <h4 class="modal-title" id="myModalLabel">Add a fresh quote</h4>
+       </div>
+       <%= simple_form_for Quote.new do |f| %>
+         <div class="modal-body">
+         <%= f.input :saying %>
+         <%= f.input :author %>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           <%= f.submit '+ add quote', class: 'btn btn-danger' %>
+         </div>
+       <% end %>
+     </div>
+   </div>
+  </div>
+
+
   <hr />
   <br class="clear" />
 
-  <div class="container">
+  <div class="container col-xs-12 col-sm-10 col-sm-offset-1">
     <% if flash[:error].present? %>
       <div class="col-xs-10 col-xs-offset-1 alert alert-danger">
         <%= flash[:error].html_safe %>
@@ -43,9 +67,8 @@
     <%= yield %>
   </div>
 
-  <br class="clear" />
-
   <div class="footer">
+    <br class="clear" />
     <div class="container">
       <div class="col-xs-6 footer-blurb">
         Built by <a target="_blank" href="https://jaredanders.github.io">Jared Gilbert</a>
