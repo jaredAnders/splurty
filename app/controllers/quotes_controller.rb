@@ -8,7 +8,12 @@ class QuotesController < ApplicationController
   end
 
   def create
-    Quote.create(quote_params)
+    @quote = Quote.create(quote_params)
+    if @quote.invalid?
+      flash[:error] = '<strong>Error:</strong> Invalid data'
+    elsif @quote.valid?
+      flash[:success] = 'Success: ' + @quote.author + ' quote added!'
+    end
     redirect_to root_path
   end
 
