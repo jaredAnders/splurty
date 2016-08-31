@@ -11,6 +11,18 @@ hr {
   margin-bottom: 0;
 }
 
+a {
+  color: $black87;
+  border-bottom: 1px solid rgba(black,0);;
+  transition: .3s ease-out;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+    color: $black87;
+    border-bottom: 1px solid $black87;
+  }
+}
+
 .clear {
   clear: both;
 }
@@ -49,6 +61,7 @@ hr {
   a {
     color: rgba(black,.5);
     font-size: 16px;
+    font-weight: normal;
     border-bottom: 1px solid rgba(black,0);;
     font: $roboto;
     transition: .3s ease-out;
@@ -87,11 +100,12 @@ h2 {
 
 .btn-danger {
   background: $red;
+  border: 1px solid $red;
   color: rgba(white,.87);
   transition: .3s ease-out;
   &:hover {
-    background: lighten($red, 5%);
-
+    background: lighten($red, 10%);
+    border: 1px solid lighten($red, 10%);
   }
 }
 
@@ -121,4 +135,10 @@ h2 {
 
 .logo:hover {
   text-decoration: none;
+}
+
+.img-filter {
+  filter: sepia(75%) grayscale(50%);
+  -webkit-filter: sepia(75%) grayscale(50%);
+  border-radius: 3px;
 }

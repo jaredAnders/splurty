@@ -18,13 +18,13 @@
         </div>
       <% end %>
     </div>
-    <div class="col-xs-4 slogan">
-      <!-- Droppin the freshest quotes in the game -->
-    </div>
-    <div class="col-xs-5 links">
+    <!-- <div class="col-xs-4">
+       Droppin the freshest quotes in the game
+    </div> -->
+    <div class="col-xs-6 col-xs-offset-3 links">
       <%= link_to '+ add a quote', new_quote_path %>
       /
-      <%= link_to 'about', '#' %>
+      <%= link_to 'about', about_path %>
     </div>
   </header>
   <hr />
@@ -48,7 +48,7 @@
   <div class="footer">
     <div class="container">
       <div class="col-xs-6 footer-blurb">
-        Built by Jared Gilbert
+        Built by <a target="_blank" href="https://jaredanders.github.io">Jared Gilbert</a>
       </div>
       <div class="col-xs-6 next-quote">
         <%= link_to root_path, class: 'btn btn-danger' do %>
