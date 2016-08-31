@@ -5,6 +5,7 @@
 $lora: 'Lora', serif;
 $roboto: 'Roboto', sans-serif;
 $red: #F44336;
+$black87: rgba(black,.87);
 
 hr {
   margin-bottom: 0;
@@ -20,68 +21,82 @@ hr {
     position: relative;
     border-radius: 100%;
     background: white;
-    border: 3px solid $red;
-    width: 80px;
-    height: 80px;
-    margin: 10px 10px;
+    border: 2px solid $red;
+    width: 50px;
+    height: 50px;
+    margin: 7px 5px;
     text-align: center;
     color: $red;
     font-size: 10px;
-    line-height: 14px;
+    line-height: 11px;
     cursor: pointer;
     transform:rotate(-11deg);
     -ms-transform:rotate(-11deg); /* IE 9 */
     -webkit-transform:rotate(-11deg); /* Opera, Chrome, and Safari */
 }
 
-.slogan {
-  font-family: $lora;
-  font-size: 1.25em;
-  font-style: italic;
-  padding-top: 26px;
-  text-align: center;
-}
+// .slogan {
+//   font-family: $lora;
+//   font-size: 1.25em;
+//   font-style: italic;
+//   padding-top: 26px;
+//   text-align: center;
+// }
 
 .links {
   padding-top: 26px;
   text-align: right;
   a {
-    color:black;
+    color: rgba(black,.5);
     font-size: 16px;
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: 1px solid rgba(black,0);;
     font: $roboto;
-    font-weight: bold;
+    transition: .3s ease-out;
     &:hover {
       text-decoration: none;
-      border-bottom: 1px solid black;
+      color: $black87;
+      border-bottom: 1px solid $black87;
     }
   }
 }
 
 header {
-  border-top: 9px solid #222222;
+  border-top: 1px solid rgba(black, .12);
 }
 
 hr {
   clear: both;
+  border-top: 1px solid rgba(black, .12);
 }
 
 h1 {
   font-family: $lora;
   font-weight: bold;
+  color: $black87;
 }
 
 h2 {
   font-family: $lora;
   font-style: italic;
+  color: $black87;
 }
 
 .next-quote {
   text-align: right;
 }
 
+.btn-danger {
+  background: $red;
+  color: rgba(white,.87);
+  transition: .3s ease-out;
+  &:hover {
+    background: lighten($red, 5%);
+
+  }
+}
+
 .btn-red {
-  color: white;
+  color: rgba(white,.87);
   background: $red;
   padding: 7px;
   border-radius: 3px;
@@ -97,9 +112,11 @@ h2 {
 
 .footer-blurb {
   font-family: $roboto;
-  color: lighten(black, 25%);
+  color: $black87;
   text-align: left;
   font-style: italic;
+  position: relative;
+  top: 15px;
 }
 
 .logo:hover {

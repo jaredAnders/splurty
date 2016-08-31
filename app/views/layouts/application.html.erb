@@ -12,8 +12,6 @@
       <%= link_to root_path, class: 'logo' do %>
         <div class="circle">
           <br />
-          Mad
-          <br />
           Fresh
           <br />
           Quotes
@@ -21,12 +19,12 @@
       <% end %>
     </div>
     <div class="col-xs-4 slogan">
-      Droppin the freshest quotes in the game
+      <!-- Droppin the freshest quotes in the game -->
     </div>
     <div class="col-xs-5 links">
-      <%= link_to 'Add a quote', new_quote_path %>
+      <%= link_to '+ add a quote', new_quote_path %>
       /
-      <%= link_to 'About', '#' %>
+      <%= link_to 'about', '#' %>
     </div>
   </header>
   <hr />
@@ -44,7 +42,9 @@
         Built by Jared Gilbert
       </div>
       <div class="col-xs-6 next-quote">
-        <%= link_to "View next quote", root_path, class: 'btn btn-danger' %>
+        <%= link_to root_path, class: 'btn btn-danger' do %>
+          <span>View new quote <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></span>
+        <% end %>
       </div>
     </div>
   </div>

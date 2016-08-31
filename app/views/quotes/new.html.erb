@@ -1,7 +1,8 @@
-<h1>Add a new quote</h1>
+<h1>Add a fresh quote</h1>
 <%= simple_form_for @quote do |f| %>
   <%= f.input :saying %>
   <%= f.input :author %>
   <br />
-  <%= f.submit '+', class: 'btn btn-danger' %>
+  <%= f.submit '+ add quote', class: 'btn btn-danger' %>
 <% end %>
+<br />
