@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Splurty</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -21,7 +22,7 @@
     <!-- <div class="col-xs-4">
        Droppin the freshest quotes in the game
     </div> -->
-    <div class="col-xs-6 col-xs-offset-3 links">
+    <div class="col-xs-9 links">
       <%= link_to '+ add a quote', '#', data: {toggle: 'modal', target: '#newQuoteModal'}%>
       &nbsp;/&nbsp;
       <%= link_to 'about', about_path %>
